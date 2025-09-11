@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniway|Home</title>
+  <link rel="stylesheet" href="{{url_for('static', filename = 'style1.css')}}">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="home-logo">
+          <img src="{{ url_for('static',filename='image/logo.png')}}" alt="logo" width="100">
+      </div>
+      <ul>
+        <li class="search-box">
+          <form action="/search" method="get" >
+            <input type="text" id="search" name="q" placeholder="Search Anime...">
+            <button id="search-button" type="submit"><span>Search</span></button>
+          </form>
+        </li>
+        <li id="contact">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="slider">
+      <div class="slides">
+        <a href="/anime/onepunchman">
+          <img src="{{ url_for('static', filename='image/saitama.jpg') }}" alt="One Punch Man">
+        </a>
+        <div class="slide-text">One Punch Man</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/spyxfamily">
+          <img src="{{ url_for('static', filename='image/spy-x-family.jpg') }}" alt="Spy x Family">
+        </a>
+        <div class="slide-text">Spy x Family</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/tensura">
+          <img src="{{ url_for('static', filename='image/slime.jpg') }}" alt="That Time I Got Reincarnated as a Slime">
+        </a>
+        <div class="slide-text">That Time I Got Reincarnated as a Slime</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/mushokutensei">
+          <img src="{{ url_for('static', filename='image/mushoku.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation">
+        </a>
+        <div class="slide-text">Mushoku Tensei: Jobless Reincarnation</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/tokyorevengers">
+          <img src="{{ url_for('static', filename='image/revenger.jpg') }}" alt="Tokyo revenger">
+        </a>
+        <div class="slide-text">Tokyo Revenger</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/dandadan">
+          <img src="{{ url_for('static', filename='image/dan-da-dan.jpg') }}" alt="Dan Da Dan">
+        </a>
+        <div class="slide-text">Dan Da Dan</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/zom100">
+          <img src="{{ url_for('static', filename='image/zom.jpg') }}" alt="Zom 100: Bucket List of the Dead">
+        </a>
+        <div class="slide-text">Zom 100: Bucket List of the Dead</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/remonster">
+          <img src="{{ url_for('static', filename='image/remonster.jpg') }}" alt="Re:Monster">
+        </a>
+        <div class="slide-text">Re:Monster</div>
+      </div>
+      <div class="slides">
+        <a href="/anime/iparryeverything">
+          <img src="{{ url_for('static', filename='image/parry.jpg') }}" alt="I Parry Everything">
+        </a>
+        <div class="slide-text">I Parry Everything</div>
+      </div>
+    </div>
+
+    <div class="airing">
+      <p>Top Airing</p>
+    </div>
+    <div class="top-airing">
+      <div class="airing-list">
+        <a href="/anime/zom100">
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/mushokutensei">
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/onepunchman">
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/spyxfamily">
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/tensura">
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/tokyorevengers">
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/dandadan">
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/remonster">
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+        </a>
+      </div>
+      <div class="airing-list">
+        <a href="/anime/iparryeverything">
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+        </a>
+      </div>
+    </div>
+
+    <div class="new">
+      <p>New Episode Release</p>
+    </div>
+    <div class="new-rank">
+      <div class="new-list">
+        <a href="/anime/remonster">
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/dandadan">
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/tokyorevengers">
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/iparryeverything">
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/spyxfamily">
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/zom100">
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+        </a>
+      </div>
+      <div class="new-list">
+        <a href="/anime/tensura">
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+        </a>
+      </div>
+    </div>
+
+    <div class="tv">
+      <p>Top TV Series</p>
+    </div>
+    <div class="tv-rank">
+      <div class="tv-list">
+        <a href="/anime/spyxfamily">
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+        </a>
+      </div>
+      <div class="tv-list">
+        <a href="/anime/mushokutensei">
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+        </a>
+      </div>
+      <div class="tv-list">
+        <a href="/anime/tensura">
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+        </a>
+      </div>
+      <div class="tv-list">
+        <a href="/anime/onepunchman">
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+        </a>
+      </div>
+      <div class="tv-list">
+        <a href="/anime/iparryeverything">
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+        </a>
+      </div>
+    </div>
+
+    <div class="popular">
+      <p>Most popular</p>
+    </div>
+    <div class="popular-rank">
+      <div class="popular-list">
+        <a href="/anime/mushokutensei">
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/zom100">
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/tensura">
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/remonster">
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/spyxfamily">
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/onepunchman">
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/iparryeverything">
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/dandadan">
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+        </a>
+      </div>
+      <div class="popular-list">
+        <a href="/anime/tokyorevengers">
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

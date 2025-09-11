@@ -1,0 +1,260 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+background: radial-gradient(circle at center, #1a0033 0%, #001133 30%, #000000 75%);
+width: 100%;
+height: 18vh;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo img{
+height: 18vh;
+width: auto;
+}
+.main-top{
+min-height: calc(170vh - 10vh - 18vh);
+color: white;
+background: radial-gradient(circle at center, #1a0022 0%, #001133 60%, #000000 85%);
+}
+.socials {
+display: flex;
+gap: 1.25rem; 
+justify-content: center;
+padding-top: 1.5625rem; 
+padding-bottom: 1.875rem; 
+}
+.socials a {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem; 
+text-decoration: none;
+color: white;
+padding: 0.625rem 1.25rem; 
+border-radius: 0.5rem; 
+font-size: 1rem; 
+font-weight: bold;
+transition: 0.3s ease;
+}
+.socials .facebook {
+background: #1877F2;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.socials .x-twitter {
+background: black;
+justify-content: center;
+align-items: center;
+}
+.socials .instagram {
+background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+justify-content: center;
+align-items: center;
+}
+.socials .share {
+background: #25D366;
+justify-content: center;
+align-items: center;
+}
+.socials a:hover {
+transform: scale(1.05);
+opacity: 0.9;
+}
+.goto {
+display: flex;
+justify-content: center;
+padding-bottom: 1.875rem; 
+}
+.goto a {
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+color: white;
+padding: 0.625rem 1.25rem; 
+border-radius: 0.5rem; 
+gap: 0.5rem; 
+font-size: 1rem; 
+font-weight: bold;
+transition: 0.3s ease;
+}
+.goto .home{
+background: #444;
+justify-content: center;
+align-items: center;
+}
+.goto a:hover {
+transform: scale(1.05);
+opacity: 0.9;
+}
+.lines-above{
+display: flex;
+justify-content: center;
+padding: 1.25rem 0rem; 
+}
+.main-search{
+display: flex;
+justify-content: center;
+height: 4vh;
+margin-bottom: 10vh;
+margin-top: 7vh;
+gap: 0.9375rem; 
+}
+#search{
+padding-left: 0.625rem; 
+border-radius: 0.5625rem; 
+width: 18vw;
+height: 4vh;
+border: none;
+margin-right: 1vw;
+}
+.main-search button{
+color: white;
+background-image:linear-gradient(135deg, #6C00FF 10%, #8E2EFF 40%, #3FA9FF 65%, #00E6FF 85%);
+border: none;
+border-radius: 0.625rem; 
+width: 6vw;
+transition: 0.3s ease;
+height: 4vh;
+}
+.main-search button:hover{
+transform: scale(1.08);
+opacity: 0.9;
+}
+.main-image{
+display: flex;
+justify-content: center;
+}
+.main-image img{
+width: auto;
+height: 50vh;
+}
+.lines-below{
+display: flex;
+justify-content: center;
+margin-top: 10vh;
+}
+.lines-below ul , .lines-above ul {
+list-style: none;
+}
+footer{
+background: radial-gradient(circle at center, #1a0033 0%, #001133 30%, #000000 75%);
+width: 100%;
+height: 10vh;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.25rem; 
+}
+@media (max-width : 930px)  {
+header{
+height: 14vh;
+}
+.logo img{
+height: 14vh;
+max-height: 16vh;
+width: auto;
+}
+#search{
+height: 3vh;
+width: 30vw;
+}
+.main-search button{
+width: 11vw;
+height: 3vh;
+}
+.main-image img{
+width: auto;
+height: 30vh;
+}
+}
+@media (max-width: 630px) {
+header{
+height: 10vh;
+}
+.logo img{
+height: 10vh;
+width: auto;
+}
+.socials{
+padding-left: 10vw;
+padding-right: 10vw;
+}
+.socials a{
+height: 3vh;
+width: 20vw;
+font-size: 0.875rem; 
+}
+.goto a{
+height: 3vh;
+width: 20vw;
+}
+.lines-above{
+display: flex;
+justify-content: center;
+padding: 0vh 8vw;
+margin-top: 4vh;
+}
+.lines-below{
+display: flex;
+justify-content: center;
+margin-top: 10vh;
+padding: 0vh 8vw;
+}
+footer{
+font-size: 1.125rem; 
+}
+}
+@media (max-width: 430px) {
+header{
+height: 8vh;
+}
+.logo img{
+height: 8vh;
+width: auto;
+}
+.socials a{
+width: 15vw;
+font-size: 0.5625rem; 
+}
+.goto a{
+width: 15vw;
+font-size: 0.5625rem; 
+}
+.lines-above{
+font-size: 0.875rem; 
+}
+.main-image img{
+width: auto;
+height: 22vh;
+}
+.lines-below{
+font-size: 0.875rem; 
+}
+footer{
+font-size: 1rem; 
+}
+}
+@media (max-width:390px) {
+.socials{
+padding-left: 0vw;
+padding-right: 0vw;
+}
+.socials a{
+width: 18vw;
+font-size: 0.4375rem; 
+}
+.goto a{
+width: 18vw;
+font-size: 0.4375rem; 
+}
+.main-search button{
+width: 14vw;
+}
+}

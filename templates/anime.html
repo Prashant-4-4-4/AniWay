@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ anime.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="home-logo">
+        <a href="/home"><img src="{{ url_for('static', filename='image/logo.png') }}" alt="logo"></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="poster">
+      <img class="bg" src="{{ url_for('static', filename='image/' + anime.bg) }}" alt="background">
+      <div class="content">
+        <img class="post" src="{{ url_for('static', filename='image/' + anime.image) }}" alt="{{ anime.title }}">
+        <h1>{{ anime.title }}</h1>
+        <a href="{{ url_for('watch', series=key, ep=1)}}" class="play-btn"><i class="fas fa-play"></i> Play</a>
+    </div>
+</div>
+    <div class="anime-details">
+      <p><strong>Season:</strong> {{ anime.season }}</p>
+      <p><strong>Genre:</strong> {{ anime.genre }}</p>
+      <p><strong>Description:</strong> {{ anime.description }}</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Aniway. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

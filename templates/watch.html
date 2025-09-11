@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ anime.title }} - Episode {{ current_ep }}</title>
+  <link rel="stylesheet" href="{{ url_for ('static', filename = 'style4.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="w-logo">
+      <img src="{{ url_for('static', filename='image/logo.png') }}" alt="logo">
+    </div>
+    <div class="w-search">
+      <form  action="/search" method="get">
+        <input id="search" type="text" name="q" placeholder="Search Anime...">
+        <button id="search-button" type="submit"><span>Search</span></button>
+      </form>
+    </div>
+    <div class="socials">
+      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="share"><i class="fas fa-share-alt"></i></a>      
+    </div>
+  </header>
+  <main>
+    <div class="set-all">
+      <div class="set-left">
+        <div class="go">
+          <p>
+            {% if current_ep > ep_min %}
+              <a id="prev" href="{{ url_for('watch', series=series, ep=current_ep-1) }}"><i class="fas fa-chevron-left"></i> Previous</a>
+            {% endif %}
+            |
+            {% if current_ep < ep_max %}
+              <a id="next" href="{{ url_for('watch', series=series, ep=current_ep+1) }}">Next <i class="fas fa-chevron-right"></i></a>
+            {% endif %}
+          </p>
+        </div>
+        <div class="num-video">
+          <ul>
+            {% for num in episodes.keys()|list|sort %}
+              <li>
+                {% set is_odd = num|int % 2 != 0 %}
+                {% if num == current_ep %}
+                  <a id="current-ep" class="{{ 'odd-ep' if is_odd else 'even-ep' }}"href="{{ url_for('watch', series=series, ep=num) }}">Episode {{ num }}   ▶</a>
+                {% else %}
+                  <a id="total-ep" class="{{ 'odd-ep' if is_odd else 'even-ep' }}"href="{{ url_for('watch', series=series, ep=num) }}">Episode {{ num }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>  
+      </div>
+      <div class="set-right">
+        <div class="set-video">
+          {% if video_id %}
+            <iframe id="video"
+              src="https://www.youtube.com/embed/{{ video_id }}"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          {% else %}
+            <p><strong>No YouTube ID set for this episode yet.</strong></p>
+            <p>Edit <code>app.py</code> and set:</p>
+            <pre>anime_data['{{ series }}']['episodes'][{{ current_ep }}] = "YOUR_VIDEO_ID"</pre>
+            <p>Once you put the video ID there (e.g. <code>dQw4w9WgXcQ</code>), reload the page and it will embed.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="discreption">
+      <img src="{{ url_for('static', filename='image/goku1.png') }}" alt="goku" >
+      <p class="share-description">
+        Are you enjoying <strong>{{ anime.title }}</strong>? We hope this episode brought some excitement, emotion, or epic moments to your day! 💫  
+        <br><br>
+        If you’re loving this anime or appreciate what we’re doing here on our site, please consider sharing it with your fellow anime fans. Whether it’s your best friend, your group chat, or that one friend who still hasn’t watched this masterpiece — let them know! 🔥  
+        <br><br>
+        Every share helps us grow and brings more fans together to celebrate the amazing world of anime. 💖  
+        <br>
+        So don’t be shy — hit that share button and spread the anime vibes! 📣✨
+      </p>
+      <img src="{{ url_for('static', filename='image/goku.png') }}" alt="goku" >
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Aniway. All rights reserved.</p>
+  </footer>
+</body>
+</html>

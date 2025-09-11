@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONT|ANI WAY</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'style2.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="logo">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-top">
+            <div class="socials">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="x-twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="share"><i class="fas fa-share-alt"></i> Share</a>
+            </div>
+            <div class="goto">
+                <a href="/home" class="home"><i class="fas fa-home"></i> Home</a>
+            </div>
+                <div class="lines-above">
+                    <ul>
+                        <li>At <strong>AniWay</strong>, every day is an adventure — watch anime free, anytime, anywhere.</li>
+                        <li>Step into <strong>AniWay</strong> — stream anime for free and connect with fans across the globe.</li>
+                    </ul>
+                </div>
+            <div class="main-search">
+              <form  action="/search" method="get">
+                <input id="search" type="text" name="q" placeholder="Search Anime...">
+                <button type="submit">Search</button>
+              </form>
+            </div>
+            <div class="main-image">
+                <img src="{{ url_for('static', filename='image/Obito.png') }}"
+                    alt="Obito Uchiha" width="150">
+                <img src="{{ url_for('static', filename='image/Vegeta.png') }}" alt="Vegeta " width="150">
+                <img src="{{ url_for('static', filename='image/gojo.png') }}" alt="Gojo Saturo"
+                    width="170">
+            </div>
+            <div class="lines-below">
+                <ul>
+                    <li><strong>More than streaming</strong> – AniWay is a community of passionate anime fans.</li>
+                    <li><strong>Share your moments</strong> – Post and discuss your favorite scenes and characters.</li>
+                    <li><strong>Discover new anime</strong> – Get recommendations tailored to your taste.</li>
+                    <li><strong>Enjoy without limits</strong> – Watch anytime, anywhere, completely free.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Aniway. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

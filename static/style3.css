@@ -122,7 +122,7 @@ footer {
   font-size: 2rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-height:700px) {
   header {
     height: 10vh;
   }
@@ -148,8 +148,38 @@ footer {
     font-size: 1.6rem;
   }
 }
+@media (max-width: 992px) and (max-height:699px) {
+  header {
+    height: 18vh;
+  }
+  .home-logo img {
+    height: 18vh;
+  }
+  main{
+    height: 142vh;
+  }
+  .poster {
+    height: 84vh;
+  }
+  .post {
+    height: 40vh;
+    width: 17vw;
+  }
+  .play-btn {
+    height: 9vh;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .anime-details {
+    padding: 2rem;
+    height: 58vh;
+  }
+  footer{
+    height: 9vh;
+  }
+}
 
-@media (max-width: 786px) {
+@media (max-width: 786px) and (min-height:660px) {
   .poster {
     height: 50vh;
   }
@@ -163,6 +193,36 @@ footer {
     padding: 8px 18px;
   }
   footer {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 786px) and (max-height:659px) {
+  header {
+    height: 18vh;
+  }
+  .home-logo img {
+    height: 18vh;
+  }
+  main{
+    height: 142vh;
+  }
+  .poster {
+    height: 84vh;
+  }
+  .post {
+    height: 40vh;
+    width: 17vw;
+  }
+  .play-btn {
+    height: 9vh;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .anime-details {
+    padding: 2rem;
+    height: 58vh;
+  }
+   footer {
     font-size: 1.4rem;
   }
 }

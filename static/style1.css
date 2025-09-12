@@ -22,8 +22,7 @@ nav{
   padding: 0 2vw;
 }
 .home-logo img{
-  height: 100%;
-  max-height: 4.375rem;
+  height: 12vh;
   width: auto;
   margin-top: 0.5625rem;
 }
@@ -225,8 +224,38 @@ main{
   font-size: 1.00rem;
 }
 }
-@media (max-width: 922px) {
+@media (max-width: 922px) and (max-height:899px){
   header{
+    height: 18vh;
+  }
+  .home-logo img{
+    height: 18vh;
+    width: auto;
+  }
+  #search{
+    height: 7vh;
+  }
+  #search-button{
+    width: 11vw;
+    height: 7vh;
+ }
+  main{
+    height: 310vh;
+  }
+  .top-airing, .new-rank, .tv-rank, .popular-rank {
+    height: 50vh;
+  }
+  .slider{
+  height: 66vh;
+ }
+  .airing-list img , .new-list img, .tv-list img, .popular-list img {
+    height: 41vh;
+    width: 15vw;
+    border-radius: 0.4125rem;
+ }
+}
+@media (max-width: 922px) and (min-height:900px) {
+  header , .home-logo img{
     height: 9vh;
   }
   #search{
@@ -251,8 +280,38 @@ main{
     border-radius: 0.4125rem;
  }
 }
-@media (max-width:768px) {
+@media (max-width:768px) and (max-height:740px){
   header{
+    height: 18vh;
+  }
+  .home-logo img{
+    height: 18vh;
+    width: auto;
+  }
+  #search{
+    height: 7vh;
+  }
+  #search-button{
+    width: 11vw;
+    height: 7vh;
+ }
+  main{
+    height: 310vh;
+  }
+  .top-airing, .new-rank, .tv-rank, .popular-rank {
+    height: 50vh;
+  }
+  .slider{
+  height: 66vh;
+ }
+  .airing-list img , .new-list img, .tv-list img, .popular-list img {
+    height: 41vh;
+    width: 15vw;
+    border-radius: 0.4125rem;
+ }
+}
+@media (max-width:768px) and (min-height:760px){
+  header , .home-logo img{
     height: 9vh;
   }
   #search-button{

@@ -179,7 +179,7 @@ footer {
   }
 }
 
-@media (max-width: 786px) and (min-height:660px) {
+@media (max-width: 820px) and (min-height:660px) {
   .poster {
     height: 50vh;
   }
@@ -196,7 +196,7 @@ footer {
     font-size: 1.4rem;
   }
 }
-@media (max-width: 786px) and (max-height:659px) {
+@media (max-width:820px) and (max-height:659px) {
   header {
     height: 18vh;
   }
@@ -216,7 +216,8 @@ footer {
   .play-btn {
     height: 9vh;
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 8px 22px;
+    width: 13vw;
   }
   .anime-details {
     padding: 2rem;

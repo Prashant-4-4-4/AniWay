@@ -6,17 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aniway|Home</title>
   <link rel="stylesheet" href="{{url_for('static', filename = 'style1.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
   <header>
     <nav>
       <div class="home-logo">
-          <img src="{{ url_for('static',filename='image/logo.png')}}" alt="logo" width="100">
+        <img src="{{ url_for('static',filename='image/logo.png')}}" alt="logo" width="100">
       </div>
       <ul>
         <li class="search-box">
-          <form action="/search" method="get" >
+          <form action="/search" method="get" class="home-search-form">
+            <details class="home-filter">
+              <summary><i class="fas fa-filter"></i></summary>
+              <div class="home-filter-group">
+                <span class="home-filter-label">Genre</span>
+                <div class="home-options">
+                  <input type="checkbox" id="action" name="genre" value="Action">
+                  <label for="action">Action</label>
+
+                  <input type="checkbox" id="comedy" name="genre" value="Comedy">
+                  <label for="comedy">Comedy</label>
+
+                  <input type="checkbox" id="drama" name="genre" value="Drama">
+                  <label for="drama">Drama</label>
+
+                  <input type="checkbox" id="romance" name="genre" value="Romance">
+                  <label for="romance">Romance</label>
+                </div>
+                <hr>
+                <span class="home-filter-label">Audio</span>
+                <div class="home-options">
+                  <input type="radio" id="sub" name="audio" value="sub">
+                  <label for="sub">Sub</label>
+
+                  <input type="radio" id="dub" name="audio" value="dub">
+                  <label for="dub">Dub</label>
+
+                  <input type="radio" id="subdub" name="audio" value="subdub">
+                  <label for="subdub">Sub & Dub</label>
+                </div>
+              </div>
+            </details>
             <input type="text" id="search" name="q" placeholder="Search Anime...">
             <button id="search-button" type="submit"><span>Search</span></button>
           </form>
@@ -89,47 +121,47 @@
     <div class="top-airing">
       <div class="airing-list">
         <a href="/anime/zom100">
-          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/mushokutensei">
-          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/onepunchman">
-          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/spyxfamily">
-          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/tensura">
-          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/tokyorevengers">
-          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/dandadan">
-          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/remonster">
-          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster">
         </a>
       </div>
       <div class="airing-list">
         <a href="/anime/iparryeverything">
-          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything">
         </a>
       </div>
     </div>
@@ -140,37 +172,37 @@
     <div class="new-rank">
       <div class="new-list">
         <a href="/anime/remonster">
-          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/dandadan">
-          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/tokyorevengers">
-          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/iparryeverything">
-          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/spyxfamily">
-          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/zom100">
-          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead">
         </a>
       </div>
       <div class="new-list">
         <a href="/anime/tensura">
-          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime">
         </a>
       </div>
     </div>
@@ -181,27 +213,27 @@
     <div class="tv-rank">
       <div class="tv-list">
         <a href="/anime/spyxfamily">
-          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family">
         </a>
       </div>
       <div class="tv-list">
         <a href="/anime/mushokutensei">
-          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation">
         </a>
       </div>
       <div class="tv-list">
         <a href="/anime/tensura">
-          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime">
         </a>
       </div>
       <div class="tv-list">
         <a href="/anime/onepunchman">
-          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man">
         </a>
       </div>
       <div class="tv-list">
         <a href="/anime/iparryeverything">
-          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything">
         </a>
       </div>
     </div>
@@ -212,47 +244,47 @@
     <div class="popular-rank">
       <div class="popular-list">
         <a href="/anime/mushokutensei">
-          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation" >
+          <img src="{{ url_for('static', filename='image/mushoku1.jpg') }}" alt="Mushoku Tensei: Jobless Reincarnation">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/zom100">
-          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead" >
+          <img src="{{ url_for('static', filename='image/zom1.jpg') }}" alt="Zom 100: Bucket List of the Dead">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/tensura">
-          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime" >
+          <img src="{{ url_for('static', filename='image/slime1.jpg') }}" alt="That Time I Got Reincarnated as a Slime">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/remonster">
-          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster" >
+          <img src="{{ url_for('static', filename='image/re-monster1.png') }}" alt="Re:Monster">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/spyxfamily">
-          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family" >
+          <img src="{{ url_for('static', filename='image/spy-x-family1.jpg') }}" alt="Spy x Family">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/onepunchman">
-          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man" >
+          <img src="{{ url_for('static', filename='image/saitama1.jpg') }}" alt="one punch man">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/iparryeverything">
-          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything" >
+          <img src="{{ url_for('static', filename='image/parry1.jpg') }}" alt="I Parry Everything">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/dandadan">
-          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan" >
+          <img src="{{ url_for('static', filename='image/dan-da-dan1.jpg') }}" alt="Dan Da Dan">
         </a>
       </div>
       <div class="popular-list">
         <a href="/anime/tokyorevengers">
-          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger" >
+          <img src="{{ url_for('static', filename='image/revenger1.jpg') }}" alt="Tokyo revenger">
         </a>
       </div>
     </div>

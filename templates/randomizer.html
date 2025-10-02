@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Randomizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style6.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h2>Anime Randomizer</h2>
+    </header>
+    <main>
+        <div class="ran-search">
+            <form method="POST" action="{{ url_for('randomizer') }}">
+                <input id="ran-box" type="text" name="anime" placeholder="Search anime...">
+                <button id="ran-button" type="submit" name="search" >Search</button>
+            </form>
+        </div>
+        <h3>Search Results</h3>
+        <div class="results">
+            {% if matches %}
+                {% for anime in matches %}
+                <div class="anime-select">
+                    <img src="{{ url_for('static', filename='image/' + anime.image) }}" >
+                    <form method="POST" action="{{ url_for('randomizer') }}">
+                        <input type="hidden" name="anime_key" value="{{ anime.key }}">
+                        <button type="submit" name="add">Add</button>
+                    </form>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p id="no-result" >Search to see matching anime here...</p>
+            {% endif %}
+        </div>
+
+        <h3>Your Watchlist</h3>
+        <div class="watchlist">
+            {% if anime_list %}
+                <div class="select-list">
+                    {% for id in anime_list %}
+                        <div class="anime-select">
+                            <img src="{{ url_for('static', filename='image/' + anime_data[id].image) }}" >
+                            <form method="POST" action="{{ url_for('randomizer') }}">
+                                <input type="hidden" name="anime_key" value="{{ id }}">
+                                <button type="submit" name="delete">Delete</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="picker">
+                    <form method="POST" action="{{ url_for('randomizer') }}">
+                        <button type="submit" name="pick"><i class="fas fa-dice"></i></button>
+                    </form>
+                    <form method="POST" action="{{ url_for('randomizer') }}">
+                        <button type="submit" name="clear">Clear All</button>
+                    </form>
+                </div>
+            {% else %}
+                <p id="add-list" >Your watchlist is empty. Add some anime!</p>
+            {% endif %}
+        </div>
+
+        {% if picked %}
+        <h3>Random Pick</h3>
+        <div class="selected">
+            <div class="anime-select">
+                <a href="/anime/{{ picked }}">
+                    <img src="{{ url_for('static', filename='image/' + anime_data[picked].image) }}" >
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Aniway. All rights reserved.</p>
+    </footer>
+</body>
+</html>

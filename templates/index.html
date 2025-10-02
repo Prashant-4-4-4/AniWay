@@ -34,12 +34,51 @@
                         <li>Step into <strong>AniWay</strong> — stream anime for free and connect with fans across the globe.</li>
                     </ul>
                 </div>
-            <div class="main-search">
-              <form  action="/search" method="get">
-                <input id="search" type="text" name="q" placeholder="Search Anime...">
-                <button type="submit">Search</button>
-              </form>
-            </div>
+                <div class="goto-randomizer">
+                    <li>Have multiple anime on your watchlist and don't know which to start first? Let our randomizer decide for you in a click — just press the dice button below!</li>
+                    <a href="{{ url_for('randomizer') }}">
+                        <button class="randomizer-button"><i class="fas fa-dice"></i></button>
+                    </a>
+                </div>
+                <div class="main-search">
+                    <form action="/search" method="get" class="search-form">
+                        <details class="filter">
+                            <summary><i class="fas fa-filter"></i></summary>
+
+                            <div class="filter-group">
+                                <span class="filter-label">Genre</span>
+                                <div class="options">
+                                    <input type="checkbox" id="action" name="genre" value="Action">
+                                    <label for="action">Action</label>
+
+                                    <input type="checkbox" id="comedy" name="genre" value="Comedy">
+                                    <label for="comedy">Comedy</label>
+
+                                    <input type="checkbox" id="drama" name="genre" value="Drama">
+                                    <label for="drama">Drama</label>
+
+                                    <input type="checkbox" id="romance" name="genre" value="Romance">
+                                    <label for="romance">Romance</label>
+                                </div>
+                                <hr>
+                                <span class="filter-label">Audio</span>
+                                <div class="options">
+                                    <input type="radio" id="sub" name="audio" value="sub">
+                                    <label for="sub">Sub</label>
+
+                                    <input type="radio" id="dub" name="audio" value="dub">
+                                    <label for="dub">Dub</label>
+
+                                    <input type="radio" id="subdub" name="audio" value="subdub">
+                                    <label for="subdub">Sub & Dub</label>
+                                </div>
+                            </div>
+                        </details>
+
+                        <input id="search" type="text" name="q" placeholder="Search Anime...">
+                        <button class="button" type="submit">Search</button>
+                    </form>
+                </div>
             <div class="main-image">
                 <img src="{{ url_for('static', filename='image/Obito.png') }}"
                     alt="Obito Uchiha" width="150">

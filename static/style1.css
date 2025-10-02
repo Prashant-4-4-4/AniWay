@@ -88,6 +88,78 @@ nav ul li {
   z-index: 1; 
   box-shadow: 0.5rem 0 1.875rem #6C00FF, -0.5rem 0 1.875rem #00E6FF ;
 }
+.home-search-form {
+    display: flex;
+    gap: 1rem;
+}
+summary {
+    height: 5vh;
+    width: 3vw;
+    border: none;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(31, 30, 30);
+    color: rgb(207, 205, 205);
+    }
+    .home-filter[open] {
+    height: 4vh;
+    z-index: 2;
+    width: 3vw;
+}
+.search-box form button { 
+    z-index: 3;         
+}
+
+.home-filter[open] .home-filter-group {
+    background-color: #1f1e1e;
+    width: 92vw;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: -54vw;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+    .home-filter-label {
+      font-weight: bold;
+      display: block;
+    }
+
+    .home-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 1vh 2vw 3vh 2vw;
+    }
+
+    .home-options input {
+      display: none; 
+    }
+
+    .home-options label {
+      padding: 8px 16px;
+      border: 1px solid #777;
+      border-radius: 14px;
+      cursor: pointer;
+      background: #2c2c3d;
+      color: #eee;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.200rem;
+    }
+
+    .home-options input:checked + label {
+      color: #00E6FF;
+      border-color: #6C00FF;
+    }
 #contact{
     font-size: 1.4375rem;
 }
@@ -217,7 +289,16 @@ main{
     width: 25vw;
     height: 4vh;
 }
-
+summary{
+  height: 4vh;
+}
+.home-filter[open] .home-filter-group {
+  margin-left: -46vw;
+ }
+.home-options label{
+  height: 5vh;
+  font-size: 1.00rem;
+}
   #search-button {
   height: 4vh;
   width: 7vw;
@@ -235,6 +316,15 @@ main{
   #search{
     height: 7vh;
   }
+  summary{
+    height: 7vh;
+  }
+  .home-filter[open] .home-filter-group {
+  margin-left: -39vw;
+ }
+ .home-options label {
+  height: 8vh;
+ }
   #search-button{
     width: 11vw;
     height: 7vh;
@@ -264,6 +354,15 @@ main{
   #search-button{
     width: 11vw;
     height: 3vh;
+ }
+ summary{
+  height: 3vh;
+ }
+ .home-filter[open] .home-filter-group {
+  margin-left: -39vw;
+ }
+ .home-options label {
+  height: 4vh;
  }
   main{
     height: 144vh;
@@ -295,6 +394,15 @@ main{
     width: 11vw;
     height: 7vh;
  }
+ summary{
+  height: 7vh;
+ }
+ .home-filter[open] .home-filter-group {
+  margin-left: -36vw;
+ }
+ .home-options label{
+  height: 8vh;
+ }
   main{
     height: 310vh;
   }
@@ -317,6 +425,15 @@ main{
   #search-button{
     width: 9vw;
     height: 3vh;
+ }
+ summary{
+  height: 3vh;
+ }
+ .home-filter[open] .home-filter-group {
+  margin-left: -36vw;
+ }
+ .home-options label{
+  height: 4vh;
  }
   main{
     height: 172vh;
@@ -346,7 +463,21 @@ main{
   #search-button{
     height: 3vh;
   }
-
+  summary{
+  height: 3vh;
+ }
+ .home-filter[open] .home-filter-group {
+  margin-left: -19vw;
+ }
+ .home-options label{
+  height: 4vh;
+ }
+ .home-search-form{
+  gap: 0.6rem;
+ }
+ .home-options {
+  padding: 1vh 2vw 1vh 2vw;
+ }
   nav ul{
   padding-right: 3vw;
  }
@@ -355,11 +486,11 @@ main{
     height: 3vh;
   }
   #search-button{
-    padding-right: 3vw;
+    padding-right: 1vw;
     width: 18vw;
  }
   #search-button span{
-    padding-left: 2vw;
+    padding-left: 1vw;
 }
   #contact{
     font-size: 1.00rem;

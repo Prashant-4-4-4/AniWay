@@ -293,10 +293,12 @@ width: 30vw;
 }
 .randomizer-button{
     height: 5vh;
+    width: 4vw;
     
 }
 summary{
     height: 5vh;
+    width: 4vw;
 }
 .filter[open] .filter-group {
     margin-left: -21vw;
@@ -357,7 +359,12 @@ font-size: 0.875rem;
 height: 3vh;
 width: 20vw;
 }
-
+.randomizer-button{
+    width: 6vw;
+}
+summary{
+    width: 6vw;
+}
 .lines-above{
 display: flex;
 justify-content: center;
@@ -396,6 +403,9 @@ height: 3vh;
 summary{
     width: 6vw;
     height: 3vh;
+}
+.filter{
+    margin-right: 3vw;
 }
 .randomizer-button{
     width: 6vw;

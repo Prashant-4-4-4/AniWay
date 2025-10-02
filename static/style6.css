@@ -290,7 +290,7 @@ footer{
     width: 11vw;
     height: 3vh;
     }
-     .picker button {
+    .picker button {
     width: 12vw;
     height: 3vh;
   }
@@ -299,4 +299,7 @@ footer{
     .picker button{
         width: 15vw;
     }
+   .results, .select-list, .selected {
+    height: 28vh;
+  }
 }

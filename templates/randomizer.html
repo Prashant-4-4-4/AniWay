@@ -18,6 +18,19 @@
                 <button id="ran-button" type="submit" name="search" >Search</button>
             </form>
         </div>
+        {% if picked %}
+        <h3>Random Pick</h3>
+        <div class="selected">
+            <div class="anime-select">
+                <a href="/anime/{{ picked }}">
+                    <img src="{{ url_for('static', filename='image/' + anime_data[picked].image) }}" >
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
         <h3>Search Results</h3>
         <div class="results">
             {% if matches %}
@@ -61,20 +74,6 @@
                 <p id="add-list" >Your watchlist is empty. Add some anime!</p>
             {% endif %}
         </div>
-
-        {% if picked %}
-        <h3>Random Pick</h3>
-        <div class="selected">
-            <div class="anime-select">
-                <a href="/anime/{{ picked }}">
-                    <img src="{{ url_for('static', filename='image/' + anime_data[picked].image) }}" >
-                </a>
-            </div>
-        </div>
-        {% endif %}
-        {% if message %}
-        <p>{{ message }}</p>
-        {% endif %}
     </main>
     <footer>
         <p>&copy; 2025 Aniway. All rights reserved.</p>

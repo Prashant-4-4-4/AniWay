@@ -165,14 +165,14 @@ summary {
 }
 main{
   background-color: #222027;
-  height: 245vh;
+  height: 260vh;
   overflow: hidden;
 }
 
 .slider {
   position: relative;
   width: 90vw;
-  height: 60vh;
+  height: 75vh;
   margin: 3vh 5vw;
   border-radius: 1.25rem;
   overflow: hidden;
